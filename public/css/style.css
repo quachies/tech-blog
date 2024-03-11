@@ -1,0 +1,83 @@
+* {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.intro-text {
+  width: 60vw;
+  height: 50vh;
+  padding: 20vh 0vw 0vh 7vw;
+}
+
+.intro-heading {
+  font-weight: 300;
+  text-wrap: balance;
+  width: 40vw;
+}
+
+.intro-slogan {
+  width: 40vw;
+  font-size: smaller;
+}
+
+.intro-message {
+  font-size: larger;
+  padding: 2vh 0vh 0vh 0vh;
+  width: 100%;
+  text-wrap: balance;
+}
+
+.homepage {
+  background-image: url("../images/pexels-cottonbro-studio-3171837.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1e1e1e;
+}
+
+.navbar-brand {
+  color: rgb(167, 162, 131);
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-item {
+  margin: 0vw 1vw 0vw 1vw;
+  color: rgba(167, 162, 131);
+}
+
+.nav-item:hover {
+  color: lightgrey;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+.dollar-amount {
+  color: #056605;
+  font-weight: bold;
+  margin-left: -5px;
+}
+
+#pac-input {
+  width: 50vw;
+}
