@@ -3,8 +3,8 @@ document.querySelector('#edit-btn').addEventListener('click', async (event) => {
       const id = event.target.getAttribute('data-id');
       console.log(id);
 
-      const name = document.querySelector('.edit-title').value.trim();
-      const description = document.querySelector('.edit-body').value.trim();
+      const name = document.querySelector('#edit-title').value.trim();
+      const description = document.querySelector('#edit-body').value.trim();
 
       if (name && description) {
         const response = await fetch(`/api/projects/${id}`, {

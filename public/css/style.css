@@ -289,3 +289,7 @@ nav {
 #edit-btn {
   margin: 1vh 0vw 0vh 0vw;
 }
+
+#edit-body {
+  height: 20vh;
+}
