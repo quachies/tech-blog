@@ -27,8 +27,31 @@ router.get('/', async (req, res) => {
   }
 });
 
-
 router.get('/project/:id', async (req, res) => {
+  try {
+    const projectData = await Project.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const project = projectData.get({ plain: true });
+
+    res.render('edit', {
+      ...project,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    console.log(err)
+    res.status(500).json(err);
+  }
+});
+
+
+router.get('/projects/:id', async (req, res) => {
   try {
     // Log 1: Before fetching project data
     console.log('Before fetching project data');

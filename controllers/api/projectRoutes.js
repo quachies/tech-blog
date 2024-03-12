@@ -35,4 +35,36 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
+router.put('/:id', async (req, res) => {
+  try {
+    const { name, description } = req.body;
+
+    const [rowsUpdated] = await Project.update(
+      {
+        name, // Update the title
+        description,  // Update the body
+      },
+      {
+        where: {
+          id: req.params.id, // Specify the condition for updating
+        },
+      }
+    );
+
+    // Check if any rows were updated
+    if (rowsUpdated === 0) {
+      res.status(404).json({ message: 'No post found with this id!' });
+      return;
+    }
+
+    // Fetch the updated post data separately
+    const updatedProject = await Project.findByPk(req.params.id);
+
+    // Respond with the updated post data
+    res.status(200).json(updatedProject);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

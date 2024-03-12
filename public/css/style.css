@@ -258,3 +258,11 @@ nav {
   padding: 0;
   font-size: 15px;
 }
+
+/* --------------------- EDIT ----------------------- */
+
+.edit-title {
+  background-color:#232b2b;
+  border: none;
+  color: #f2f2f2;
+}

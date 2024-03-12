@@ -15,7 +15,7 @@ document.querySelector('#comment-btn').addEventListener('click', async (event) =
         });
 
         if (response.ok) {
-          document.location.replace(`/project/${id}`);
+          document.location.replace(`/projects/${id}`);
           console.log('it worked')
         } else {
           console.log('something went wrong');

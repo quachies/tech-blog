@@ -3,13 +3,13 @@ document.querySelector('#edit-btn').addEventListener('click', async (event) => {
       const id = event.target.getAttribute('data-id');
       console.log(id);
 
-      const title = document.querySelector('.edit-title').value.trim();
-      const body = document.querySelector('.edit-body').value.trim();
+      const name = document.querySelector('.edit-title').value.trim();
+      const description = document.querySelector('.edit-body').value.trim();
 
-      if (title && body) {
-        const response = await fetch(`/api/posts/${id}`, {
+      if (name && description) {
+        const response = await fetch(`/api/projects/${id}`, {
           method: 'PUT',
-          body: JSON.stringify({ title, body }),
+          body: JSON.stringify({ name, description }),
           headers: {
             'Content-Type': 'application/json',
           },

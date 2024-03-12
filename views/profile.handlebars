@@ -39,13 +39,14 @@
       {{#each projects as |project|}}
         <div class='single-post'>
           <div class='col-md-8'>
-            <h4 class="project-title"><a href='/project/{{project.id}}'>{{project.name}}</a></h4>
+            <h4 class="project-title"><a href='/projects/{{project.id}}'>{{project.name}}</a></h4>
           </div>
           <div class='col-md-4'>
             <button
               class='btn btn-sm btn-danger'
               data-id='{{project.id}}'
             >DELETE</button>
+          <a href="/project/{{project.id}}"><button class="edit-btn btn btn-primary">edit</button></a>
           </div>
         </div>
       {{/each}}
