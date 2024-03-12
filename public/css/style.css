@@ -22,6 +22,7 @@ h4 {
   color: #f2f2f2;
   padding: 5px;
   width: 100%;
+  height: fit-content;
 }
 
 .form-input:focus {
@@ -265,4 +266,26 @@ nav {
   background-color:#232b2b;
   border: none;
   color: #f2f2f2;
+}
+
+.edit-hold {
+  border-radius: 10px;
+  padding: 2vh 2vw 0vh 2vw;
+  background-color:	#191E1E;
+  height: fit-content;
+  padding: 2vh 2vw 2vh 2vw;
+}
+
+.edit-created-by {
+  color: #999999;
+  margin: 1vh 0vw 0vh 0vw;
+  font-size: 12px;
+}
+
+#text-edit {
+  margin: 2vh 0vw 1vh 0vw;
+}
+
+#edit-btn {
+  margin: 1vh 0vw 0vh 0vw;
 }
