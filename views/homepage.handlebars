@@ -1,9 +1,18 @@
-<div class="homepage">
-<div class="intro-text">
-  <h1 class="intro-heading">
-    Welcome to Party Planner
-  </h1>
-  <p class="intro-slogan">Where visions become extraordinary events!</p>
-<p class="intro-message">We specialize in crafting unforgettable experiences that mirror your distinctive style. Let's transform your ideas into remarkable celebrations together!</p>
+<h1 class="home-heading">What's Trending</h1>
+{{#each projects as |project| }}
+<div class="home-post">
+  <div class="home-blog-title-container">
+    <h2>
+      <a class="home-blog-title" href="/project/{{project.id}}">{{project.name}}</a>
+    </h2>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{project.description}}
+    </p>
+  </div>
+  <div class="home-created-by-container">
+    <p class="home-created-by">Created by {{project.user.name}} on {{format_date project.date_created}}</p>
+  </div>
 </div>
-</div>
+{{/each}}

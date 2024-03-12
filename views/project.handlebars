@@ -1,14 +1,44 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
+<div class='project-container'>
+  <div class='project'>
+    <div>
+      <div id='post-title'>
+        <h2>{{name}}</h2>
+        <p id='post-date'>Posted by
+          {{user.name}}
+          on
+          {{format_date date_created}}</p>
+      </div>
+      <p id='post-body'>{{description}}</p>
+    </div>
+  </div>
+  {{! <h2>Comments</h2> }}
+
+  <div class='comment-form'>
+    {{#if logged_in}}
+      <input
+        name='commentText'
+        type='text'
+        class='comment-input'
+        placeholder='Add Comment...'
+      />
+      <button
+        id='comment-btn'
+        class='btn btn-light'
+        data-id='{{this.id}}'
+      >Comment</button>
+    {{else}}
+      <a href='/login'><button class='btn btn-primary'>Login To Add Comment</button></a>
+    {{/if}}
+  </div>
+
+  {{#each comments}}
+    <div class='comment-text'>
+      <div class="comment-user-info">
+        <p class='comment-creation'>{{user.name}}</p>
+        <p class='comment-date'>{{format_date date_created}}</p>
+      </div>
+      <p class="comment-body">{{text}}</p>
+    </div>
+  {{/each}}
 </div>
+<script src='/js/comment.js'></script>
