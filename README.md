@@ -8,8 +8,7 @@ This web app allows users to create and account, add, edit and delete their own 
 ![my image](/public/images/tech-blog-screenshot.png)
 
 ## Executing Program
-Link to walkthrough video:
-https://drive.google.com/file/d/113aY9F6nHmnYQR-DXlRY6F50C-4clf6k/view?usp=sharing
+Link to live application: https://techhub-2e27fc23eded.herokuapp.com/
 
 ## Help
 Reach me at quachies@gmail.com for any advice or help with common issues.
