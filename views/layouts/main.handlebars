@@ -16,7 +16,7 @@
           <a class='main-title' href='/'>TechHub</a>
         </h1>
         <nav>
-          <!-- Conditionally render login or logout links -->
+          
           {{#if logged_in}}
             <a class="nav-link" href='/'><img class="nav-icon" src="/images/home.png">Home</a>
             <a class="nav-link" href='/profile'><img class="nav-icon" src="/images/profile.png">Profile</a>
@@ -30,7 +30,7 @@
     </div>
     <div>
       <main class='container container-fluid mt-5'>
-        <!-- Render the sub layout -->
+      
         {{{body}}}
       </main>
     </div>
@@ -38,7 +38,7 @@
 
     </footer>
 
-    <!-- Render script for logged in users only -->
+  
     {{#if logged_in}}
       <script src='/js/logout.js'></script>
     {{/if}}

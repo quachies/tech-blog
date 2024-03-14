@@ -53,8 +53,7 @@ router.get('/project/:id', async (req, res) => {
 
 router.get('/projects/:id', async (req, res) => {
   try {
-    // Log 1: Before fetching project data
-    console.log('Before fetching project data');
+   
 
     const projectData = await Project.findByPk(req.params.id, {
       include: [
@@ -72,20 +71,18 @@ router.get('/projects/:id', async (req, res) => {
       ],
     });
 
-    // Log 2: After fetching project data
-    console.log('After fetching project data', projectData);
+   
 
     const project = projectData.get({ plain: true });
 
-    // Log 3: Project data in plain format
-    console.log('Project data in plain format', project);
+   
 
     res.render('project', {
       ...project,
       logged_in: req.session.logged_in
     });
   } catch (err) {
-    // Log 4: Error log
+    
     console.error('Error in project route', err);
     res.status(500).json(err);
   }
